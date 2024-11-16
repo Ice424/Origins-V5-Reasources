@@ -1,6 +1,0 @@
-{
-  "parent": "chill:overlay",
-  "textures": {
-    "texture": "chill:demo/menu"
-  }
-}

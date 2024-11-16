@@ -4,6 +4,6 @@
         "layer0": "item/barrier"
 	},
 	"overrides": [
-        {"predicate": {"custom_model_data": 1}, "model": "chill:main"}
+        {"predicate": {"custom_model_data": 1}, "model": "chill:menu/menu"}
     ]
 }

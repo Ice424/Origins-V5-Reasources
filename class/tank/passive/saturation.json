@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "chill:icons/class/tank/passive/saturation"
+        "layer0": "chill:item/icons/class/tank/passive/saturation"
     }
 }

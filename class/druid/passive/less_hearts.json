@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "chill:icons/class/druid/passive/less_hearts"
+        "layer0": "chill:item/icons/class/druid/passive/less_hearts"
     }
 }

@@ -3,11 +3,11 @@ from pathlib import Path
 files = []
 predicates = []
 model_num = 4
-for x in os.walk("assets\\chill\\textures\\icons\\class"):
+for x in os.walk("assets\\chill\\textures\\item\\icons\\class"):
     if x[2]:
         for file in x[2]:
             path = str(x[0])+str(file)
-            path = path.replace("assets\\chill\\textures\\icons\\", "")
+            path = path.replace("assets\\chill\\textures\\item\\icons\\", "")
             path = path.replace(file, "")
 
             files.append([path, file])
@@ -24,7 +24,7 @@ for file in files:
     f.write("""{
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "chill:icons/""" + file[0].replace("\\", "/") + "/" + Path(file[1]).stem + """"
+        "layer0": "chill:item/icons/""" + file[0].replace("\\", "/") + "/" + Path(file[1]).stem + """"
     }
 }""")
     f.close()

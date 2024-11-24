@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "chill:item/icons/shop"
+    "layer0": "chill:icons/shop"
   }
 }

@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"parent": "stick",
 	"textures": {
-		"0": "chill:item/shop",
-		"particle": "chill:item/shop"
+		"0": "chill:shop",
+		"particle": "chill:shop"
 	},
 	"elements": [
 		{

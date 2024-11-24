@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"texture": "chill:demo/menu"
+		"texture": "chill:none"
 	},
 	"gui_light":"front",
 	"elements": [ 	 

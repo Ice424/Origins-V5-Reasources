@@ -5,7 +5,8 @@
 	},
 	"overrides": [
         {"predicate": {"custom_model_data": 1}, "model": "chill:menu/menu"},
-        {"predicate": {"custom_model_data": 2}, "model": "chill:menu/fightershop"},
-        {"predicate": {"custom_model_data": 3}, "model": "chill:menu/fighterspellbook"}
+        {"predicate": {"custom_model_data": 2}, "model": "chill:menu/shopselect"},
+        {"predicate": {"custom_model_data": 3}, "model": "chill:menu/fightershop"},
+        {"predicate": {"custom_model_data": 4}, "model": "chill:menu/fighterspellbook"}
     ]
 }

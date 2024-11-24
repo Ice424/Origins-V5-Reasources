@@ -3,6 +3,20 @@
         {
             "type": "single",
             "resource": "entity/chest/normal"
+        },
+        {
+            "type": "directory",
+            "source": "icons",
+            "prefix": "icons/"
+        },
+        {
+            "type": "directory",
+            "source": "menu",
+            "prefix": "menu/"
+        },
+        {
+            "type": "single",
+            "resource": "chill:shop"
         }
     ]
 }

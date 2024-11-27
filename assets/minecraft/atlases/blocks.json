@@ -17,6 +17,10 @@
         {
             "type": "single",
             "resource": "chill:shop"
+        },
+        {
+            "type": "single",
+            "resource": "chill:essence"
         }
     ]
 }

@@ -1,32 +1,34 @@
 import os
 from pathlib import Path
-files = []
-predicates = []
-model_num = 4
-for x in os.walk("assets\\chill\\textures\\item\\icons\\class"):
-    if x[2]:
-        for file in x[2]:
-            path = str(x[0])+str(file)
-            path = path.replace("assets\\chill\\textures\\item\\icons\\", "")
-            path = path.replace(file, "")
+os.chdir(Path(__file__).parents[2])
+RESOURCES = os.path.abspath("./resourcepacks/Origins-V5Resources/assets")
+DATA = os.path.abspath(
+    "./saves/New World/datapacks/Origins-V5-Data/data/chill/powers")
 
-            files.append([path, file])
-print(files)
-for file in files:
-    try:
-        os.makedirs(file[0])
-    except:
-        print("failed to create directory")
-        
-    predicates.append('{"predicate": {"custom_model_data": '+ str(model_num) +' }, "model":"chill:item/custom/icons/' +file[0] + "\\" + Path(file[1]).stem + '"},')
-    model_num += 1
-    f = open(file[0] + "\\" + Path(file[1]).stem + ".json", "w")
-    f.write("""{
-    "parent": "minecraft:item/handheld",
-    "textures": {
-        "layer0": "chill:item/icons/""" + file[0].replace("\\", "/") + "/" + Path(file[1]).stem + """"
-    }
-}""")
-    f.close()
-for predicate in predicates:
-    print(predicate.replace("\\", "/"))
+#
+powers = {
+    "high": [],
+    "low": [],
+    "class": {
+        "cleric": [],
+        "druid": [],
+        "fighter": [],
+        "rogue": [],
+        "tank": [],
+        "wizard": []
+
+    }}
+
+for path, subdirs, files in os.walk(DATA):
+    for name in files:
+        file = (os.path.join(path, name).replace("/home/elliotd/.local/share/ModrinthApp/profiles/OriginsV5/saves/New World/datapacks/Origins-V5-Data/data/chill/powers/",""))
+        file = file.split("/")
+        print(file)
+        if file[0] == "class":
+            powers["class"][file[1]].append(str(file[2:]))
+        else:
+            powers[file[0]].append(str(file[1]))
+
+file = open("/home/elliotd/.local/share/ModrinthApp/profiles/OriginsV5/resourcepacks/Origins-V5-Reasources/powers.json", "w")
+file.write(str(powers))
+file.close()

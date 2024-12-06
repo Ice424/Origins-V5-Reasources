@@ -1,0 +1,108 @@
+{
+    "high": [
+        "grow",
+        "permeation",
+        "inventory",
+        "jump",
+        "scan",
+        "shrink"
+    ],
+    "low": [
+        "hunger_gain",
+        "hunger_loss",
+        "falldmg",
+        "xpgain",
+        "luck",
+        "health",
+        "swim_speed",
+        "firedmg",
+        "xp"
+    ],
+    "class": {
+        "cleric": {
+            "special": [
+                "see",
+                "death",
+                "luck",
+                "summon"
+            ],
+            "high": [
+                "lifesteal",
+                "heal"
+            ],
+            "passive": [
+                "health",
+                "heal",
+                "healing_field",
+                "less_hearts"
+            ]
+        },
+        "druid": {
+            "special": [
+                "temp"
+            ],
+            "high": [],
+            "passive": [
+                "foliage_heal",
+                "vegetarian",
+                "less_hearts",
+                "animals_follow"
+            ]
+        },
+        "fighter": {
+            "high": [
+                "saturation",
+                "speed",
+                "ddamgemobs",
+                "reach",
+                "hotvillage",
+                "speedboost",
+                "tame",
+                "arrows",
+                "powered",
+                "overheal"
+            ],
+            "passive": [
+                "speed",
+                "strength",
+                "hearts",
+                "haste",
+                "haste",
+                "speed",
+                "strength",
+                "more_hearts"
+            ]
+        },
+        "rogue": {
+            "special": [],
+            "high": [],
+            "passive": [
+                "no_nametag",
+                "silent_footsteps",
+                "longmob_aggro",
+                "less_hearts"
+            ]
+        },
+        "tank": {
+            "special": [],
+            "high": [],
+            "passive": [
+                "temp",
+                "saturation",
+                "resistance"
+            ]
+        },
+        "wizard": {
+            "special": [],
+            "high": [],
+            "passive": [
+                "health",
+                "pearl",
+                "glow",
+                "gain_enderpearl",
+                "less_hearts",
+                "hit_glow"
+            ]
+        }
+    }
+}

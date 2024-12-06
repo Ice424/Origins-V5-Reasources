@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "chill:item/icons/class/cleric/passive/healing_field"
+        "layer0": "chill:icons/class/passive/healing_field"
     }
 }

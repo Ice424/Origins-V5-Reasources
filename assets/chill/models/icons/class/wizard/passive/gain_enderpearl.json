@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "chill:item/icons/class/wizard/passive/gain_enderpearl"
+        "layer0": "chill:icons/class/passive/gain_enderpearl"
     }
 }

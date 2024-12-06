@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "chill:item/icons/class/rogue/passive/silent_footsteps"
+        "layer0": "chill:icons/class/passive/silent_footsteps"
     }
 }

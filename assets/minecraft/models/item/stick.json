@@ -1,42 +1,536 @@
 {
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "minecraft:item/stick"
-  },
-  "overrides": [
-    {"predicate": {"custom_model_data": 1 },"model": "chill:shop"},
-    {"predicate": {"custom_model_data": 2 },"model": "chill:icons/shop"},
-    {"predicate": {"custom_model_data": 3 },"model": "chill:icons/spellbook"},
-    {"predicate": {"custom_model_data": 4 }, "model":"chill:icons/class/cleric/high/temp"},
-    {"predicate": {"custom_model_data": 5 }, "model":"chill:icons/class/cleric/passive/healing_field"},
-    {"predicate": {"custom_model_data": 6 }, "model":"chill:icons/class/cleric/passive/less_hearts"},
-    {"predicate": {"custom_model_data": 7 }, "model":"chill:icons/class/cleric/special/temp"},
-    {"predicate": {"custom_model_data": 8 }, "model":"chill:icons/class/druid/high/temp"},
-    {"predicate": {"custom_model_data": 9 }, "model":"chill:icons/class/druid/passive/animals_follow"},
-    {"predicate": {"custom_model_data": 10 }, "model":"chill:icons/class/druid/passive/foliage_heal"},
-    {"predicate": {"custom_model_data": 11 }, "model":"chill:icons/class/druid/passive/less_hearts"},
-    {"predicate": {"custom_model_data": 12 }, "model":"chill:icons/class/druid/passive/vegetarian"},
-    {"predicate": {"custom_model_data": 13 }, "model":"chill:icons/class/druid/special/temp"},
-    {"predicate": {"custom_model_data": 14 }, "model":"chill:icons/class/fighter/high/temp"},
-    {"predicate": {"custom_model_data": 15 }, "model":"chill:icons/class/fighter/passive/haste"},
-    {"predicate": {"custom_model_data": 16 }, "model":"chill:icons/class/fighter/passive/more_hearts"},
-    {"predicate": {"custom_model_data": 17 }, "model":"chill:icons/class/fighter/passive/speed"},
-    {"predicate": {"custom_model_data": 18 }, "model":"chill:icons/class/fighter/passive/strength"},
-    {"predicate": {"custom_model_data": 19 }, "model":"chill:icons/class/fighter/special/temp"},
-    {"predicate": {"custom_model_data": 20 }, "model":"chill:icons/class/rogue/high/temp"},
-    {"predicate": {"custom_model_data": 21 }, "model":"chill:icons/class/rogue/passive/less_hearts"},
-    {"predicate": {"custom_model_data": 22 }, "model":"chill:icons/class/rogue/passive/longmob_aggro"},
-    {"predicate": {"custom_model_data": 23 }, "model":"chill:icons/class/rogue/passive/no_nametag"},
-    {"predicate": {"custom_model_data": 24 }, "model":"chill:icons/class/rogue/passive/silent_footsteps"},
-    {"predicate": {"custom_model_data": 25 }, "model":"chill:icons/class/rogue/special/temp"},
-    {"predicate": {"custom_model_data": 26 }, "model":"chill:icons/class/tank/high/temp"},
-    {"predicate": {"custom_model_data": 27 }, "model":"chill:icons/class/tank/passive/resistance"},
-    {"predicate": {"custom_model_data": 28 }, "model":"chill:icons/class/tank/passive/saturation"},
-    {"predicate": {"custom_model_data": 29 }, "model":"chill:icons/class/tank/special/temp"},
-    {"predicate": {"custom_model_data": 30 }, "model":"chill:icons/class/wizard/high/temp"},
-    {"predicate": {"custom_model_data": 31 }, "model":"chill:icons/class/wizard/passive/gain_enderpearl"},
-    {"predicate": {"custom_model_data": 32 }, "model":"chill:icons/class/wizard/passive/hit_glow"},
-    {"predicate": {"custom_model_data": 33 }, "model":"chill:icons/class/wizard/passive/less_hearts"},
-    {"predicate": {"custom_model_data": 34 }, "model":"chill:icons/class/wizard/special/temp"}
-  ]
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "minecraft:item/stick"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "chill:shop"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 2
+            },
+            "model": "chill:icons/shop"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 3
+            },
+            "model": "chill:icons/spellbook"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 47
+            },
+            "model": "chill:low/falldmg"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 48
+            },
+            "model": "chill:low/falldmg"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 49
+            },
+            "model": "chill:low/falldmg"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 50
+            },
+            "model": "chill:low/firedmg"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 51
+            },
+            "model": "chill:low/firedmg"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 52
+            },
+            "model": "chill:low/firedmg"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 53
+            },
+            "model": "chill:low/health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 54
+            },
+            "model": "chill:low/health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 55
+            },
+            "model": "chill:low/health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 56
+            },
+            "model": "chill:low/health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 57
+            },
+            "model": "chill:low/health"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 58
+            },
+            "model": "chill:low/hunger_gain"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 59
+            },
+            "model": "chill:low/hunger_gain"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 60
+            },
+            "model": "chill:low/hunger_gain"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 61
+            },
+            "model": "chill:low/hunger_loss"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 62
+            },
+            "model": "chill:low/hunger_loss"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 63
+            },
+            "model": "chill:low/hunger_loss"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 64
+            },
+            "model": "chill:low/luck"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 65
+            },
+            "model": "chill:low/luck"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 66
+            },
+            "model": "chill:low/luck"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 67
+            },
+            "model": "chill:low/luck"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 68
+            },
+            "model": "chill:low/luck"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 69
+            },
+            "model": "chill:low/swim_speed"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 70
+            },
+            "model": "chill:low/swim_speed"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 71
+            },
+            "model": "chill:low/swim_speed"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 72
+            },
+            "model": "chill:low/xp"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 73
+            },
+            "model": "chill:low/xpgain"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 74
+            },
+            "model": "chill:low/xpgain"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 75
+            },
+            "model": "chill:low/xpgain"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 35
+            },
+            "model": "chill:high/grow"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 36
+            },
+            "model": "chill:high/inventory"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 37
+            },
+            "model": "chill:high/inventory"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 38
+            },
+            "model": "chill:high/jump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 39
+            },
+            "model": "chill:high/jump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 40
+            },
+            "model": "chill:high/jump"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 41
+            },
+            "model": "chill:high/permeation"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 42
+            },
+            "model": "chill:high/permeation"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 43
+            },
+            "model": "chill:high/scan"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 44
+            },
+            "model": "chill:high/scan"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 45
+            },
+            "model": "chill:high/shrink"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 46
+            },
+            "model": "chill:high/shrink"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 14
+            },
+            "model": "chill:class/cleric/special"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 15
+            },
+            "model": "chill:class/cleric/special"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 16
+            },
+            "model": "chill:class/cleric/special"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 17
+            },
+            "model": "chill:class/cleric/special"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 10
+            },
+            "model": "chill:class/cleric/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 11
+            },
+            "model": "chill:class/cleric/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 12
+            },
+            "model": "chill:class/cleric/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 13
+            },
+            "model": "chill:class/cleric/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 76
+            },
+            "model": "chill:class/cleric/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 77
+            },
+            "model": "chill:class/cleric/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 78
+            },
+            "model": "chill:class/druid/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 79
+            },
+            "model": "chill:class/druid/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 80
+            },
+            "model": "chill:class/druid/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 81
+            },
+            "model": "chill:class/druid/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 18
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 19
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 20
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 21
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 22
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 23
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 24
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 25
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 26
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 27
+            },
+            "model": "chill:class/fighter/high"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 28
+            },
+            "model": "chill:class/fighter/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 29
+            },
+            "model": "chill:class/fighter/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 30
+            },
+            "model": "chill:class/fighter/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 31
+            },
+            "model": "chill:class/fighter/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 82
+            },
+            "model": "chill:class/fighter/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 83
+            },
+            "model": "chill:class/fighter/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 84
+            },
+            "model": "chill:class/fighter/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 85
+            },
+            "model": "chill:class/fighter/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 86
+            },
+            "model": "chill:class/rogue/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 87
+            },
+            "model": "chill:class/rogue/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 88
+            },
+            "model": "chill:class/rogue/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 89
+            },
+            "model": "chill:class/rogue/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 90
+            },
+            "model": "chill:class/tank/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 91
+            },
+            "model": "chill:class/tank/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 32
+            },
+            "model": "chill:class/wizard/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 33
+            },
+            "model": "chill:class/wizard/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 34
+            },
+            "model": "chill:class/wizard/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 92
+            },
+            "model": "chill:class/wizard/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 93
+            },
+            "model": "chill:class/wizard/passive"
+        },
+        {
+            "predicate": {
+                "custom_model_data": 94
+            },
+            "model": "chill:class/wizard/passive"
+        }
+    ]
 }

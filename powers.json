@@ -2,169 +2,65 @@
     "high": [
         {
             "name": "grow",
-            "predicate": 35
+            "predicate": 47
         },
         {
             "name": "inventory",
-            "predicate": 36
-        },
-        {
-            "name": "inventory",
-            "predicate": 37
+            "predicate": 48
         },
         {
             "name": "jump",
-            "predicate": 38
-        },
-        {
-            "name": "jump",
-            "predicate": 39
-        },
-        {
-            "name": "jump",
-            "predicate": 40
+            "predicate": 50
         },
         {
             "name": "permeation",
-            "predicate": 41
-        },
-        {
-            "name": "permeation",
-            "predicate": 42
+            "predicate": 53
         },
         {
             "name": "scan",
-            "predicate": 43
-        },
-        {
-            "name": "scan",
-            "predicate": 44
+            "predicate": 55
         },
         {
             "name": "shrink",
-            "predicate": 45
-        },
-        {
-            "name": "shrink",
-            "predicate": 46
+            "predicate": 57
         }
     ],
     "low": [
         {
             "name": "falldmg",
-            "predicate": 47
-        },
-        {
-            "name": "falldmg",
-            "predicate": 48
-        },
-        {
-            "name": "falldmg",
-            "predicate": 49
-        },
-        {
-            "name": "firedmg",
-            "predicate": 50
-        },
-        {
-            "name": "firedmg",
-            "predicate": 51
-        },
-        {
-            "name": "firedmg",
-            "predicate": 52
-        },
-        {
-            "name": "health",
-            "predicate": 53
-        },
-        {
-            "name": "health",
-            "predicate": 54
-        },
-        {
-            "name": "health",
-            "predicate": 55
-        },
-        {
-            "name": "health",
-            "predicate": 56
-        },
-        {
-            "name": "health",
-            "predicate": 57
-        },
-        {
-            "name": "hunger_gain",
-            "predicate": 58
-        },
-        {
-            "name": "hunger_gain",
             "predicate": 59
         },
         {
-            "name": "hunger_gain",
-            "predicate": 60
-        },
-        {
-            "name": "hunger_loss",
-            "predicate": 61
-        },
-        {
-            "name": "hunger_loss",
+            "name": "firedmg",
             "predicate": 62
         },
         {
-            "name": "hunger_loss",
-            "predicate": 63
-        },
-        {
-            "name": "luck",
-            "predicate": 64
-        },
-        {
-            "name": "luck",
+            "name": "health",
             "predicate": 65
         },
         {
-            "name": "luck",
-            "predicate": 66
-        },
-        {
-            "name": "luck",
-            "predicate": 67
-        },
-        {
-            "name": "luck",
-            "predicate": 68
-        },
-        {
-            "name": "swim_speed",
-            "predicate": 69
-        },
-        {
-            "name": "swim_speed",
+            "name": "hunger_gain",
             "predicate": 70
         },
         {
-            "name": "swim_speed",
-            "predicate": 71
-        },
-        {
-            "name": "xp",
-            "predicate": 72
-        },
-        {
-            "name": "xpgain",
+            "name": "hunger_loss",
             "predicate": 73
         },
         {
-            "name": "xpgain",
-            "predicate": 74
+            "name": "luck",
+            "predicate": 76
+        },
+        {
+            "name": "swim_speed",
+            "predicate": 81
+        },
+        {
+            "name": "xp",
+            "predicate": 84
         },
         {
             "name": "xpgain",
-            "predicate": 75
+            "predicate": 85
         }
     ],
     "class": {
@@ -172,19 +68,19 @@
             "special": [
                 {
                     "name": "death",
-                    "predicate": 14
-                },
-                {
-                    "name": "luck",
                     "predicate": 15
                 },
                 {
-                    "name": "see",
+                    "name": "luck",
                     "predicate": 16
                 },
                 {
-                    "name": "summon",
+                    "name": "see",
                     "predicate": 17
+                },
+                {
+                    "name": "summon",
+                    "predicate": 18
                 }
             ],
             "high": [
@@ -205,152 +101,85 @@
                 {
                     "name": "health",
                     "predicate": 13
-                },
-                {
-                    "name": "healing_field",
-                    "predicate": 76
-                },
-                {
-                    "name": "less_hearts",
-                    "predicate": 77
                 }
             ]
         },
         "druid": {
             "special": [],
             "high": [],
-            "passive": [
-                {
-                    "name": "animals_follow",
-                    "predicate": 78
-                },
-                {
-                    "name": "foliage_heal",
-                    "predicate": 79
-                },
-                {
-                    "name": "less_hearts",
-                    "predicate": 80
-                },
-                {
-                    "name": "vegetarian",
-                    "predicate": 81
-                }
-            ]
+            "passive": []
         },
         "fighter": {
             "high": [
                 {
                     "name": "ddamgemobs",
-                    "predicate": 18
-                },
-                {
-                    "name": "hotvillage",
-                    "predicate": 19
-                },
-                {
-                    "name": "reach",
-                    "predicate": 20
-                },
-                {
-                    "name": "saturation",
                     "predicate": 21
                 },
                 {
-                    "name": "speed",
+                    "name": "hotvillage",
                     "predicate": 22
                 },
                 {
-                    "name": "arrows",
+                    "name": "reach",
                     "predicate": 23
                 },
                 {
-                    "name": "overheal",
+                    "name": "saturation",
                     "predicate": 24
                 },
                 {
-                    "name": "powered",
+                    "name": "speed",
                     "predicate": 25
                 },
                 {
-                    "name": "speedboost",
+                    "name": "arrows",
                     "predicate": 26
                 },
                 {
+                    "name": "overheal",
+                    "predicate": 28
+                },
+                {
+                    "name": "powered",
+                    "predicate": 30
+                },
+                {
+                    "name": "speedboost",
+                    "predicate": 32
+                },
+                {
                     "name": "tame",
-                    "predicate": 27
+                    "predicate": 34
                 }
             ],
             "passive": [
                 {
                     "name": "haste",
-                    "predicate": 28
+                    "predicate": 36
                 },
                 {
                     "name": "hearts",
-                    "predicate": 29
+                    "predicate": 37
                 },
                 {
                     "name": "speed",
-                    "predicate": 30
+                    "predicate": 38
                 },
                 {
                     "name": "strength",
-                    "predicate": 31
-                },
-                {
-                    "name": "haste",
-                    "predicate": 82
-                },
-                {
-                    "name": "more_hearts",
-                    "predicate": 83
-                },
-                {
-                    "name": "speed",
-                    "predicate": 84
-                },
-                {
-                    "name": "strength",
-                    "predicate": 85
+                    "predicate": 39
                 }
             ]
         },
         "rogue": {
             "special": [],
             "high": [],
-            "passive": [
-                {
-                    "name": "less_hearts",
-                    "predicate": 86
-                },
-                {
-                    "name": "longmob_aggro",
-                    "predicate": 87
-                },
-                {
-                    "name": "no_nametag",
-                    "predicate": 88
-                },
-                {
-                    "name": "silent_footsteps",
-                    "predicate": 89
-                }
-            ]
+            "passive": []
         },
         "tank": {
             "special": [],
             "high": [],
-            "passive": [
-                {
-                    "name": "resistance",
-                    "predicate": 90
-                },
-                {
-                    "name": "saturation",
-                    "predicate": 91
-                }
-            ]
+            "passive": []
         },
         "wizard": {
             "special": [],
@@ -358,27 +187,15 @@
             "passive": [
                 {
                     "name": "glow",
-                    "predicate": 32
+                    "predicate": 43
                 },
                 {
                     "name": "health",
-                    "predicate": 33
+                    "predicate": 44
                 },
                 {
                     "name": "pearl",
-                    "predicate": 34
-                },
-                {
-                    "name": "gain_enderpearl",
-                    "predicate": 92
-                },
-                {
-                    "name": "hit_glow",
-                    "predicate": 93
-                },
-                {
-                    "name": "less_hearts",
-                    "predicate": 94
+                    "predicate": 45
                 }
             ]
         }

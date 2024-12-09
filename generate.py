@@ -16,6 +16,37 @@ MODEL = {
     }
 }
 
+def add_power(powers, category, entry, group=None, type=None):
+    """
+    Adds a power entry to the JSON structure if it doesn't already exist.
+    
+    Args:
+        powers (dict): The JSON structure.
+        category (str): The main category ('high', 'low', or 'class').
+        entry (dict): The new entry to add (e.g., {"name": "new_power", "predicate": 99}).
+        group (str, optional): The group within 'class' (e.g., 'cleric').
+        type (str, optional): The specific type within the group ('special', 'high', 'passive').
+    """
+    name = entry["name"].strip().lower()
+    predicate = entry["predicate"]
+
+    if category in powers:
+        if group and category == "class":
+            if group in powers["class"] and type in powers["class"][group]:
+                target_list = powers["class"][group][type]
+            else:
+                return
+        else:
+            target_list = powers[category]
+
+        # Check for duplicates
+        if any(item["name"].strip().lower() == name for item in target_list) or name == "tag":
+            return
+
+        # Add new entry
+        target_list.append({"name": name, "predicate": predicate})
+
+
 
 def generate_json():
     predicate = 10
@@ -61,43 +92,27 @@ def generate_json():
             else:
                 file = (os.path.join(path, name).replace(DATA + "/", ""))
             file = file.split("/")
-
+            
             if file[0] == "class":
-                if file[3] != "tag.json" and file[3].endswith(".json"):
-                    # class powers being placed into class key
-                    powers["class"][file[1]][file[2]].append({
-                        "name": str(file[3].replace(".json", "")),
-                        "predicate": predicate
-                    })
-                    predicate += 1
-
-                elif file[3] != "tag.json" and file[4] == "primary.json":
-                    powers["class"][file[1]][file[2]].append({
-                        "name": str(file[3]),
-                        "predicate": predicate
-                    })
-                    predicate += 1
-
-            elif str(file[1]) not in powers[file[0]]:
-                powers[file[0]].append({
-                    "name": str(file[1]).replace(".json", ""),
-                    "predicate": predicate
-                })
+                add_power(powers, "class", {"name": file[3].replace(".json", ""), "predicate": predicate}, group=file[1], type=file[2])
                 predicate += 1
+            else:
+                add_power(powers, file[0], {"name": file[1].replace(".json", ""), "predicate": predicate})
+                predicate += 1
+
 
     for path, subdirs, files in os.walk(os.path.join(RESOURCES + "/chill/textures/icons/")):
         for name in files:
-            file = (os.path.join(path, name).replace(
-                RESOURCES+"/chill/textures/icons/", "").replace("\\", "/"))
+            file = (os.path.join(path, name).replace(RESOURCES+"/chill/textures/icons/", "").replace("\\", "/"))
+            
             file = file.split("/")
-            if len(file) != 1 and "temp.txt" not in file and file[0] == "class" and file[3].endswith(".png"):
-                # class powers being placed into class key
-                powers["class"][file[1]][file[2]].append({
-                    "name": str(file[3].replace(".png", "")),
-                    "predicate":  predicate
-                })
-                predicate += 1
-
+            print(file)
+            #if file[0] == "class":
+            #    add_power(powers, "class", {"name": file[3].replace(".json", ""), "predicate": predicate}, group=file[1], type=file[2])
+            #    predicate += 1
+            #else:
+            #    add_power(powers, file[0], {"name": file[1].replace(".json", ""), "predicate": predicate})
+            #    predicate += 1
     file = open("./resourcepacks/Origins-5E-Reasources/powers.json", "w")
     file.write(json.dumps(powers, indent=4))
     file.close()

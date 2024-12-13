@@ -35,16 +35,17 @@ def add_power(powers, category, entry, group=None, type=None):
             if group in powers["class"] and type in powers["class"][group]:
                 target_list = powers["class"][group][type]
             else:
-                return
+                return False
         else:
             target_list = powers[category]
 
         # Check for duplicates
-        if any(item["name"].strip().lower() == name for item in target_list) or name == "tag":
-            return
+        if any(item["name"].strip().lower() == name for item in target_list) or name == "tag" or name == "temp.txt":
+            return False
 
         # Add new entry
         target_list.append({"name": name, "predicate": predicate})
+        return True
 
 
 
@@ -94,25 +95,24 @@ def generate_json():
             file = file.split("/")
             
             if file[0] == "class":
-                add_power(powers, "class", {"name": file[3].replace(".json", ""), "predicate": predicate}, group=file[1], type=file[2])
-                predicate += 1
+                if add_power(powers, "class", {"name": file[3].replace(".json", ""), "predicate": predicate}, group=file[1], type=file[2]):
+                    predicate += 1
             else:
-                add_power(powers, file[0], {"name": file[1].replace(".json", ""), "predicate": predicate})
-                predicate += 1
-
-
+                if add_power(powers, file[0], {"name": file[1].replace(".json", ""), "predicate": predicate}):
+                    predicate += 1
+    
     for path, subdirs, files in os.walk(os.path.join(RESOURCES + "/chill/textures/icons/")):
         for name in files:
             file = (os.path.join(path, name).replace(RESOURCES+"/chill/textures/icons/", "").replace("\\", "/"))
             
             file = file.split("/")
-            print(file)
-            #if file[0] == "class":
-            #    add_power(powers, "class", {"name": file[3].replace(".json", ""), "predicate": predicate}, group=file[1], type=file[2])
-            #    predicate += 1
-            #else:
-            #    add_power(powers, file[0], {"name": file[1].replace(".json", ""), "predicate": predicate})
-            #    predicate += 1
+            if file[0] == "class":
+                if add_power(powers, "class", {"name": file[3].replace(".png", ""), "predicate": predicate}, group=file[1], type=file[2]):
+                    predicate += 1
+            else:
+                if add_power(powers, file[0], {"name": file[1].replace(".png", ""), "predicate": predicate}):
+                    predicate += 1
+    
     file = open("./resourcepacks/Origins-5E-Reasources/powers.json", "w")
     file.write(json.dumps(powers, indent=4))
     file.close()
@@ -226,9 +226,8 @@ def generate_predicates():
 
 generate_json()
 
-generate_models(
-    "./resourcepacks/Origins-5E-Reasources/assets/chill/models/icons/")
+generate_models("./resourcepacks/Origins-5E-Reasources/assets/chill/models/icons/")
 
 generate_tags(DATA)
 
-generate_predicates()
+#generate_predicates()

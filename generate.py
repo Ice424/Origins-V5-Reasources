@@ -210,8 +210,8 @@ def generate_predicates():
                 out.append({"predicate": {"custom_model_data": power["predicate"]},
                             "model": "chill:" + os.path.join("class", classes, types).replace("\\", "/")})
 
-    with open("./resourcepacks/Origins-5E-Reasources/assets/minecraft/models/item/stick.json", "r") as file:
-        data = json.load(file)
+    file = open("./resourcepacks/Origins-5E-Reasources/assets/minecraft/models/item/stick.json", "r")
+    data = json.load(file)
 
     for override in out:
         if override in data["overrides"]:
